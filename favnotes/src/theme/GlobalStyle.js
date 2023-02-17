@@ -10,11 +10,11 @@ const GlobalStyle = createGlobalStyle`
 
 
     html {
-        font-size: 62.5%; //! => 10px = 1rem "happy rems"
+        font-size: 62.5%; // => 10px = 1rem "happy rems"
     }
 
     body {
-        font-size: 1.6rem; //! 16px
+        font-size: 1.6rem; // 16px
         font-family: "Montserrat", sans-serif;
     }
 `;
