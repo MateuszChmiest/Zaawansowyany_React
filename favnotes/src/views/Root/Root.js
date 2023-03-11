@@ -1,21 +1,25 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Button from '../../components/atoms/Button/Button';
-import GlobalStyle from '../../theme/GlobalStyle';
-import {theme} from '../../theme/mainTheme';
+import MainTemplate from '../../templates/MainTemplate';
+import Notes from '../Notes';
+import Twitters from '../Twitters';
+import Articles from '../Articles';
 
 function Root() {
   return (
-    <div>
-      <GlobalStyle />
-      <ThemeProvider theme={theme}>
-        <>
-          <h1>Hello</h1>
-          <Button>Close / Save</Button>
-          <Button secondary>Close / Save</Button>
-        </>
-      </ThemeProvider>
-    </div>
+    <MainTemplate>
+      <BrowserRouter>
+        <Routes>
+          <Route exact path='/' element={<Notes/>}/>
+          <Route path='/articles' element={<Articles/>}/>
+          <Route path='/twitters' element={<Twitters/>}/>
+        </Routes>
+        <h1>Hello</h1>
+        <Button>Close / Save</Button>
+        <Button secondary>Close / Save</Button>
+      </BrowserRouter>
+    </MainTemplate>
   );
 }
 
