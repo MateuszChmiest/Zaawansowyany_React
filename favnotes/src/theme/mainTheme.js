@@ -8,9 +8,9 @@ export const theme = {
   light: 300,
   bold: 600,
   fontSize: {
-    s: '1.2rem',
-    m: '1.6rem',
-    l: '1.8rem',
-    xl: '2rem'
+    s: '1.4rem',
+    m: '1.8rem',
+    l: '2rem',
+    xl: '3rem'
   }
 };
